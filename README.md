@@ -137,7 +137,8 @@ DuplicateResourceException
 Handled globally using @ControllerAdvice.
 
 🌐 API Endpoints Summary
-Department
+Department:-
+
 POST   /hospital/dept
 
 POST   /hospital/dept/all
@@ -152,7 +153,8 @@ PUT    /hospital/dept/update
 
 DELETE /hospital/dept/delete/{id}
 
-Doctor
+Doctor:-
+
 POST   /hospital/doctor/add
 
 GET    /hospital/doctor/all
@@ -173,7 +175,8 @@ PUT    /hospital/doctor/update
 
 DELETE /hospital/doctor/delete/{id}
 
-Patient
+Patient:-
+
 POST   /hospital/patient/register
 
 GET    /hospital/patient/all
@@ -192,7 +195,8 @@ PUT    /hospital/patient/update
 
 DELETE /hospital/patient/delete/{id}
 
-Appointment
+Appointment:-
+
 POST   /hospital/appointment/book
 
 GET    /hospital/appointment/all
@@ -211,7 +215,8 @@ PUT    /hospital/appointment/cancel/{id}
 
 PUT    /hospital/appointment/update
 
-Medical Record
+Medical Record:-
+
 POST   /hospital/report/create/appointment/{appointmentId}/medical-record
 
 GET    /hospital/report/all
@@ -226,7 +231,8 @@ GET    /hospital/report/date/{date}
 
 GET    /hospital/report/appointment/id/{appointmentId}
 
-Prescription
+Prescription:-
+
 POST   /hospital/prescription/generate/id/{medicalRecordId}
 
 GET    /hospital/prescription/all
