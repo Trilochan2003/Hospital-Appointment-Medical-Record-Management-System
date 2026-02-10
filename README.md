@@ -1,5 +1,5 @@
-# Hospital-Appointment-Medical-Record-Management-System'
-🏥 Hospital Appointment & Medical Record Management System
+# 🏥Hospital-Appointment-Medical-Record-Management-System'
+
 
 A Spring Boot REST API for managing hospital operations such as Departments, Doctors, Patients, Appointments, Medical Records, and Prescriptions.
 The system enforces real-world constraints like appointment validation, record creation only after completion, and controlled updates.
@@ -34,13 +34,14 @@ repository
 database
 
 Layer Responsibilities
-Layer	Responsibility
+
 Controller	Handles HTTP requests & responses
 Service	Builds response structure & status
 DAO	Business logic & validations
 Repository	Database operations (JPA)
 Entity	Database mapping
 Exception	Global & custom error handling
+
 🛠️ Technologies Used
 
 Java 17+
@@ -138,61 +139,102 @@ Handled globally using @ControllerAdvice.
 🌐 API Endpoints Summary
 Department
 POST   /hospital/dept
+
 POST   /hospital/dept/all
+
 GET    /hospital/dept/all
+
 GET    /hospital/dept/id/{id}
+
 GET    /hospital/dept/name/{name}
+
 PUT    /hospital/dept/update
+
 DELETE /hospital/dept/delete/{id}
 
 Doctor
 POST   /hospital/doctor/add
+
 GET    /hospital/doctor/all
+
 GET    /hospital/doctor/id/{id}
+
 GET    /hospital/doctor/specialization/{specialization}
+
 GET    /hospital/doctor/department/{name}
+
 GET    /hospital/doctor/patient/{patientId}
+
 GET    /hospital/doctor/appointment/{appointmentId}
+
 GET    /hospital/doctor/day/{day}
+
 PUT    /hospital/doctor/update
+
 DELETE /hospital/doctor/delete/{id}
 
 Patient
 POST   /hospital/patient/register
+
 GET    /hospital/patient/all
+
 GET    /hospital/patient/id/{id}
+
 GET    /hospital/patient/phone/{phone}
+
 GET    /hospital/patient/age/{age}
+
 GET    /hospital/patient/appointment/{appointmentId}
+
 GET    /hospital/patient/medical-record/{recordId}
+
 PUT    /hospital/patient/update
+
 DELETE /hospital/patient/delete/{id}
 
 Appointment
 POST   /hospital/appointment/book
+
 GET    /hospital/appointment/all
+
 GET    /hospital/appointment/id/{id}
+
 GET    /hospital/appointment/date/{date}
+
 GET    /hospital/appointment/doctor/{doctorId}
+
 GET    /hospital/appointment/patient/{patientId}
+
 GET    /hospital/appointment/status/{status}
+
 PUT    /hospital/appointment/cancel/{id}
+
 PUT    /hospital/appointment/update
 
 Medical Record
 POST   /hospital/report/create/appointment/{appointmentId}/medical-record
+
 GET    /hospital/report/all
+
 GET    /hospital/report/id/{id}
+
 GET    /hospital/report/patient/{patientId}
+
 GET    /hospital/report/doctor/{doctorId}
+
 GET    /hospital/report/date/{date}
+
 GET    /hospital/report/appointment/id/{appointmentId}
 
 Prescription
 POST   /hospital/prescription/generate/id/{medicalRecordId}
+
 GET    /hospital/prescription/all
+
 GET    /hospital/prescription/id/{id}
+
 GET    /hospital/prescription/medical-record/{medicalRecordId}
+
 GET    /hospital/prescription/patient/{patientId}
 
 🧪 Testing
