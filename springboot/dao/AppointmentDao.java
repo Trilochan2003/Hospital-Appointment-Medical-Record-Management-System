@@ -39,6 +39,14 @@ public class AppointmentDao {
 		LocalDateTime start = appointmentDate.atStartOfDay();
 		LocalDateTime end = appointmentDate.atTime(LocalTime.MAX);
 		boolean exists = appointmentRepository.existsByPatientAndAppointmentDateTimeBetween(appointment.getPatient(), start, end);
+		//		if (appointmentRepository.existsByDoctor_DoctorIdAndAppointmentDateTime(
+//		        appointment.getDoctor().getDoctorId(),
+//		        appointment.getAppointmentDateTime())) {
+//
+//		    throw new DuplicateResourceException(
+//		        "Doctor already has an appointment at this time"
+//		    );
+//		}
 		if (appointment.getStatus() == null) {
 		    appointment.setStatus(AppointmentStatus.BOOKED);
 		}
